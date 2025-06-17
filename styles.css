@@ -1,1 +1,26 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+/* Custom Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: none;}
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s both;
+}
+@keyframes fireGlow {
+  0% { text-shadow: 0 0 8px #ffb300, 0 0 16px #ff7043;}
+  100% { text-shadow: 0 0 20px #ffb300, 0 0 32px #ff7043;}
+}
+.animate-fire {
+  animation: fireGlow 1.2s infinite alternate;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-8px);}
+}
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
