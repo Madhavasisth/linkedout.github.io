@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>True Self</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-rose-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 font-inter min-h-screen transition-colors duration-500">
+  <!-- Header -->
+  <header class="relative z-20">
+    <div class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+      <div class="text-2xl font-extrabold text-rose-600 dark:text-rose-400 tracking-tight">True Self</div>
+      <nav>
+        <ul class="flex gap-6 text-base font-semibold">
+          <li><a href="#" class="text-gray-700 hover:text-rose-600 dark:text-gray-200 dark:hover:text-rose-300 transition">Home</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-rose-600 dark:text-gray-200 dark:hover:text-rose-300 transition">Profile</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-rose-600 dark:text-gray-200 dark:hover:text-rose-300 transition">Resume Burner</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-rose-600 dark:text-gray-200 dark:hover:text-rose-300 transition">Forum</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-rose-600 dark:text-gray-200 dark:hover:text-rose-300 transition">About</a></li>
+          <li><a href="#" class="text-gray-700 hover:text-rose-600 dark:text-gray-200 dark:hover:text-rose-300 transition">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Dark mode toggle -->
+      <button id="dark-toggle" class="ml-6 p-2 rounded-full bg-gray-100 dark:bg-gray-700 shadow transition hover:bg-gray-200 dark:hover:bg-gray-600">
+        <svg id="icon-sun" class="w-6 h-6 text-yellow-400 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5" />
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M17.66 17.66l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M17.66 6.34l1.42-1.42"/>
+        </svg>
+        <svg id="icon-moon" class="w-6 h-6 text-gray-700 dark:text-gray-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="relative flex items-center justify-center min-h-[60vh] py-16 px-4 overflow-hidden">
+    <!-- Background image & overlay -->
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+         alt="Background"
+         class="absolute inset-0 w-full h-full object-cover opacity-60 dark:opacity-30 pointer-events-none z-0" />
+    <div class="absolute inset-0 bg-gradient-to-b from-white/80 to-rose-100/80 dark:from-gray-900/90 dark:to-gray-800/80 z-10"></div>
+    <!-- Content -->
+    <div class="relative z-20 text-center max-w-2xl mx-auto animate-fade-in-up">
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-6 text-rose-700 dark:text-rose-400 drop-shadow-lg">
+        Be Your True Self
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-700 dark:text-gray-200 mb-8">
+        Join a community where you can express who you really are, without the pressure of traditional resumes.
+      </p>
+      <button class="bg-rose-600 hover:bg-rose-700 dark:bg-rose-500 dark:hover:bg-rose-400 text-white font-bold py-4 px-10 rounded-xl shadow-xl transition-all duration-300 animate-bounce-slow text-lg">
+        Get Started
+      </button>
+    </div>
+  </section>
+  <!-- Cards Section -->
+  <section class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-white/90 dark:bg-gray-900/80 backdrop-blur rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up" style="animation-delay:0.2s;">
+      <div class="text-4xl mb-4 animate-pulse">👤</div>
+      <h3 class="text-xl font-bold text-rose-600 dark:text-rose-300 mb-2">Create Your Profile</h3>
+      <p class="text-gray-700 dark:text-gray-200">Customize your profile with hobbies, interests, and anti-endorsements.</p>
+    </div>
+    <div class="bg-white/90 dark:bg-gray-900/80 backdrop-blur rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up" style="animation-delay:0.4s;">
+      <div class="text-4xl mb-4 animate-fire">🔥</div>
+      <h3 class="text-xl font-bold text-rose-600 dark:text-rose-300 mb-2">Resume Burner</h3>
+      <p class="text-gray-700 dark:text-gray-200">Let go of traditional expectations with our unique resume burning feature.</p>
+    </div>
+    <div class="bg-white/90 dark:bg-gray-900/80 backdrop-blur rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl animate-fade-in-up" style="animation-delay:0.6s;">
+      <div class="text-4xl mb-4 animate-bounce">💬</div>
+      <h3 class="text-xl font-bold text-rose-600 dark:text-rose-300 mb-2">Join the Forum</h3>
+      <p class="text-gray-700 dark:text-gray-200">Share your stories and connect with others in a supportive environment.</p>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-rose-600 dark:bg-gray-900 text-white dark:text-gray-200 text-center py-6 mt-16 rounded-t-2xl shadow-inner">
+    <p>© 2023 True Self. All rights reserved.</p>
+  </footer>
+  <!-- Dark Mode Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const html = document.documentElement;
+      const toggle = document.getElementById('dark-toggle');
+      const iconSun = document.getElementById('icon-sun');
+      const iconMoon = document.getElementById('icon-moon');
+      function setDarkMode(on) {
+        html.classList.toggle('dark', on);
+        iconSun.classList.toggle('hidden', !on);
+        iconMoon.classList.toggle('hidden', on);
+        localStorage.setItem('color-theme', on ? 'dark' : 'light');
+      }
+      const userPref = localStorage.getItem('color-theme');
+      const systemPref = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setDarkMode(userPref === 'dark' || (!userPref && systemPref));
+      toggle.addEventListener('click', () => setDarkMode(!html.classList.contains('dark')));
+    });
+  </script>
+</body>
+</html>
