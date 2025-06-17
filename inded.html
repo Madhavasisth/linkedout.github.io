@@ -1,32 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>True Self</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script>
-    // Tailwind dark mode toggle logic
-    document.addEventListener('DOMContentLoaded', function () {
-      const html = document.documentElement;
-      const toggle = document.getElementById('dark-toggle');
-      const iconSun = document.getElementById('icon-sun');
-      const iconMoon = document.getElementById('icon-moon');
-      function setDarkMode(on) {
-        html.classList.toggle('dark', on);
-        iconSun.classList.toggle('hidden', !on);
-        iconMoon.classList.toggle('hidden', on);
-        localStorage.setItem('color-theme', on ? 'dark' : 'light');
-      }
-      // Initialize
-      const userPref = localStorage.getItem('color-theme');
-      const systemPref = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setDarkMode(userPref === 'dark' || (!userPref && systemPref));
-      toggle.addEventListener('click', () => setDarkMode(!html.classList.contains('dark')));
-    });
-  </script>
+   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gradient-to-br from-rose-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 font-inter min-h-screen transition-colors duration-500">
   <!-- Header -->
@@ -97,28 +78,24 @@
   <footer class="bg-rose-600 dark:bg-gray-900 text-white dark:text-gray-200 text-center py-6 mt-16 rounded-t-2xl shadow-inner">
     <p>© 2023 True Self. All rights reserved.</p>
   </footer>
-
-  <!-- Custom Animations -->
-  <style>
-    @layer utilities {
-      .animate-fade-in-up {
-        animation: fadeInUp 0.8s both;
+  <!-- Dark Mode Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const html = document.documentElement;
+      const toggle = document.getElementById('dark-toggle');
+      const iconSun = document.getElementById('icon-sun');
+      const iconMoon = document.getElementById('icon-moon');
+      function setDarkMode(on) {
+        html.classList.toggle('dark', on);
+        iconSun.classList.toggle('hidden', !on);
+        iconMoon.classList.toggle('hidden', on);
+        localStorage.setItem('color-theme', on ? 'dark' : 'light');
       }
-      @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(40px);}
-        to { opacity: 1; transform: none;}
-      }
-      .animate-bounce-slow {
-        animation: bounce 2s infinite;
-      }
-      .animate-fire {
-        animation: fireGlow 1.2s infinite alternate;
-      }
-      @keyframes fireGlow {
-        0% { text-shadow: 0 0 8px #ffb300, 0 0 16px #ff7043;}
-        100% { text-shadow: 0 0 20px #ffb300, 0 0 32px #ff7043;}
-      }
-    }
-  </style>
+      const userPref = localStorage.getItem('color-theme');
+      const systemPref = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setDarkMode(userPref === 'dark' || (!userPref && systemPref));
+      toggle.addEventListener('click', () => setDarkMode(!html.classList.contains('dark')));
+    });
+  </script>
 </body>
 </html>
